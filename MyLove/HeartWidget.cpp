@@ -305,7 +305,7 @@ void HeartWidget::paintEvent(QPaintEvent *event)
             pen.setBrush(QColor("skyblue"));
             painter->setPen(pen);
             //painter->drawText(1100, 600, "  小姜，七夕快乐！");
-            painter->drawText(w / 1.745 + d, h / 1.80, "小姜，每天都要快乐！");
+            painter->drawText(w / 1.745 + d, h / 1.80, "记得，每天都要快乐！");
             state = 11;
         }
         else if (state == 11)
@@ -327,8 +327,8 @@ void HeartWidget::paintEvent(QPaintEvent *event)
                 break;
             }
 			painter->setPen(pen);
-            //painter->drawText(1100, 640, "           —— by 小蔡学长");
-            painter->drawText(w / 1.745 + d, h / 1.678, "           —— by 小蔡学长");
+            //painter->drawText(1100, 640, "           —— by KikyoShaw");
+            painter->drawText(w / 1.745 + d, h / 1.678, "           —— by KikyoShaw");
             state = 12;
         }
         else if (state == 12)
