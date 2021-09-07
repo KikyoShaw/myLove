@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>qrc/images/aa.png</file>
+        <file>qrc/images/face.png</file>
+        <file>qrc/images/ff.png</file>
+        <file>qrc/images/ff1.png</file>
+        <file>qrc/images/ll.png</file>
+        <file>qrc/images/ll1.png</file>
+        <file>qrc/images/love.png</file>
+        <file>qrc/images/love1.png</file>
+        <file>qrc/images/rr.png</file>
+        <file>qrc/images/rr1.png</file>
+        <file>qrc/images/zz.png</file>
+    </qresource>
+    <qresource prefix="/gif">
+        <file>qrc/gif/fire.gif</file>
+        <file>qrc/gif/fire1.gif</file>
+        <file>qrc/gif/hh.gif</file>
+        <file>qrc/gif/hh1.gif</file>
+        <file>qrc/gif/ll.gif</file>
+    </qresource>
+    <qresource prefix="/music">
+        <file>qrc/music/bgm.mp3</file>
+    </qresource>
+</RCC>
