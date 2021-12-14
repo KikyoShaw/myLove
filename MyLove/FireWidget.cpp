@@ -20,7 +20,7 @@
 
 FireWidget::FireWidget(QWidget *parent) : QWidget(parent)
 {
-    // 设置程序不在任务栏显示且窗体无边框 ^_^
+    // 设置程序不在任务栏显示且窗体无边框
     this->setWindowFlags(Qt::Tool | Qt::FramelessWindowHint);
 
 	auto desktop = QApplication::desktop();
@@ -28,7 +28,7 @@ FireWidget::FireWidget(QWidget *parent) : QWidget(parent)
 	//获取是否有第二个显示屏
 	if (2 == desktop->screenCount())
 		index = 1;
-	setGeometry(desktop->screenGeometry(1));
+	setGeometry(desktop->screenGeometry(index));
     // 全屏显示
     QRect screenRect = desktop->screenGeometry(index);
     w = screenRect.width();

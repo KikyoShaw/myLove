@@ -18,7 +18,7 @@ private:
 	void initText();
 
 private:
-    QString text = QStringLiteral("送\n给\n我\n大\n学\n唯\n一\n的\n一\n个\n喜\n欢\n的\n女\n生");
+    QString text = QStringLiteral("送\n给\n某\n个\n会\n陪\n伴\n我\n一\n生\n的\n女\n孩");
     int i = 1;
     int w, h;
     // 定义分辨率标识,适配多种分别率

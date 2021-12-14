@@ -23,7 +23,7 @@ HeartWidget::~HeartWidget()
 
 void HeartWidget::initWindow()
 {
-    // 设置程序不在任务栏显示且窗体无边框 ^_^
+    // 设置程序不在任务栏显示且窗体无边框
     this->setWindowFlags(Qt::Tool | Qt::FramelessWindowHint);
     // 窗口整体透明，但窗口控件不透明
     this->setAttribute(Qt::WA_TranslucentBackground, true);
@@ -35,7 +35,7 @@ void HeartWidget::initWindow()
 	//获取是否有第二个显示屏
 	if (2 == desktop->screenCount())
 		index = 1;
-	setGeometry(desktop->screenGeometry(1));
+	setGeometry(desktop->screenGeometry(index));
 	// 全屏显示
 	QRect screenRect = desktop->screenGeometry(index);
     w = screenRect.width();
@@ -334,7 +334,7 @@ void HeartWidget::paintEvent(QPaintEvent *event)
             }
 			painter->setPen(pen);
             //painter->drawText(1100, 640, "           —— by KikyoShaw");
-            painter->drawText(w / 1.745 + d, h / 1.678, QStringLiteral("           —— by KikyoShaw"));
+            painter->drawText(w / 1.745 + d, h / 1.678, "                  -- by KikyoShaw");
             state = 12;
         }
         else if (state == 12)
@@ -354,7 +354,7 @@ void HeartWidget::paintEvent(QPaintEvent *event)
             }
 
             painter->setPen(pen);
-            painter->drawText(w / 10.0, h / 5.0 * 4.5, "江南伞贵，长安花贵，洛阳纸贵，然而都不及你贵!");
+            painter->drawText(w / 10.0, h / 5.0 * 4.5 + 50, "江南伞贵，长安花贵，洛阳纸贵，然而都不及你贵!");
             state = 13;
         }
 
