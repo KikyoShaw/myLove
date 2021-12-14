@@ -30,8 +30,14 @@ void HeartWidget::initWindow()
     // 全屏显示
     this->showFullScreen();
 
-    // 设置分别率
-    QRect screenRect = QApplication::desktop()->screenGeometry();
+	auto desktop = QApplication::desktop();
+	int index = 0;
+	//获取是否有第二个显示屏
+	if (2 == desktop->screenCount())
+		index = 1;
+	setGeometry(desktop->screenGeometry(1));
+	// 全屏显示
+	QRect screenRect = desktop->screenGeometry(index);
     w = screenRect.width();
     h = screenRect.height();
     if (w == 1920)
@@ -328,7 +334,7 @@ void HeartWidget::paintEvent(QPaintEvent *event)
             }
 			painter->setPen(pen);
             //painter->drawText(1100, 640, "           —— by KikyoShaw");
-            painter->drawText(w / 1.745 + d, h / 1.678, "           —— by KikyoShaw");
+            painter->drawText(w / 1.745 + d, h / 1.678, QStringLiteral("           —— by KikyoShaw"));
             state = 12;
         }
         else if (state == 12)
